@@ -1,12 +1,49 @@
+<!-- diary.html -->
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <title>DIARY</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>★ おきらくやほの部屋 — DIARY ★</title>
+  <link rel="icon" href="favicon.png" />
+  <style>
+    body{margin:0;color:#ffccff;background:#000 url("https://www.transparenttextures.com/patterns/stardust.png");font-family:"MS PGothic","Meiryo","Osaka",Verdana,Arial,sans-serif}
+    .header{padding:18px 10px;text-align:center;background:#111;border-bottom:2px solid #ff00ff;color:#00ffff;font-weight:700;text-shadow:0 0 10px #ff00ff,0 0 6px #00ffff}
+    .menu{text-align:center;background:#222;border-bottom:2px solid #333}
+    .menu a{display:inline-block;padding:8px 10px;margin:4px 6px;color:#ff99cc;text-decoration:none;font-weight:bold;border-radius:6px}
+    .menu a:hover{color:#00ffff;background:#161616;box-shadow:0 0 8px #ff00ff}
+    .content{max-width:860px;margin:20px auto;padding:22px;background:rgba(20,20,20,.88);border:2px solid #ff66ff;border-radius:12px;box-shadow:0 0 16px #ff00ff;line-height:1.9}
+    h1{color:#ffff99;text-shadow:0 0 5px #ff00ff}
+    .entry{margin:0 0 18px 0;padding-bottom:14px;border-bottom:1px dashed #444}
+    .date{color:#ffff99}
+    .footer{text-align:center;padding:12px;margin:24px 0 0;color:#aaa;background:#111;border-top:2px solid #ff00ff;font-size:12px}
+  </style>
 </head>
 <body>
-  <h1>日記ページ</h1>
-  <p>ここに日記を書いていきます。</p>
-  <a href="index.html">← HOMEに戻る</a>
+  <header class="header">★ DIARY ★</header>
+  <nav class="menu">
+    <a href="index.html">HOME</a>
+    <a href="profile.html">PROFILE</a>
+    <a href="links.html">LINKS</a>
+    <a href="diary.html">DIARY</a>
+  </nav>
+
+  <main class="content">
+    <h1>日記</h1>
+
+    <div class="entry">
+      <div class="date"><strong>2025/09/01</strong></div>
+      <div>GitHub Pagesで昔風サイトを公開！黒＋星柄いい感じ。リンクも整備中。</div>
+    </div>
+
+    <div class="entry">
+      <div class="date"><strong>2025/08/31</strong></div>
+      <div>ひさびさに手打ちHTML。テーブル世代の血が騒ぐ。</div>
+    </div>
+
+    <!-- ここから下に追記していく -->
+  </main>
+
+  <footer class="footer">© 2025 おきらくやほ</footer>
 </body>
 </html>
