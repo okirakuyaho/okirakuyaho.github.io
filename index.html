@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>★おきらくやほのオタクサイト★</title>
+  <title>★おきらくやほの部屋★</title>
   <style>
     body {
       background-color: #000;
@@ -10,96 +10,86 @@
       font-family: "MS PGothic", "Osaka", sans-serif;
       color: #ffccff;
       margin: 0;
+      padding: 0;
     }
-    table {
-      width: 90%;
-      margin: 20px auto;
-      border: 2px solid #ff66cc;
-      background: rgba(20, 20, 20, 0.9);
-      border-collapse: collapse;
-      box-shadow: 0 0 20px #ff66cc;
-    }
-    td {
-      padding: 15px;
-    }
+
+    /* ヘッダー */
     .header {
-      background: linear-gradient(90deg, #330033, #000033);
       text-align: center;
+      padding: 20px;
+      background: #111;
       color: #00ffff;
       font-size: 28px;
       font-weight: bold;
-      letter-spacing: 3px;
-      border-bottom: 2px solid #ff66cc;
       text-shadow: 0 0 10px #ff00ff, 0 0 5px #00ffff;
+      border-bottom: 2px solid #ff00ff;
     }
-    .nav {
-      background: #111;
+
+    /* メニュー */
+    .menu {
       text-align: center;
-      border-bottom: 1px dashed #ff66cc;
-    }
-    .nav a {
-      color: #ff99ff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: 14px;
-    }
-    .nav a:hover {
-      color: #00ffcc;
+      padding: 10px;
       background: #222;
-      padding: 2px 6px;
-      border-radius: 5px;
+      border-bottom: 2px solid #444;
     }
-    .content {
-      text-align: center;
-      color: #fff;
-      padding: 30px;
-      line-height: 1.8;
-    }
-    .content h2 {
-      color: #ffccff;
-      text-shadow: 0 0 5px #ff33ff, 0 0 5px #00ffff;
-    }
-    marquee {
-      color: #ffff66;
+    .menu a {
+      color: #ff99cc;
+      margin: 0 10px;
+      text-decoration: none;
       font-weight: bold;
-      font-size: 14px;
     }
-    .counter {
-      margin-top: 15px;
-      font-size: 13px;
+    .menu a:hover {
       color: #00ffff;
+      text-shadow: 0 0 5px #ff00ff;
     }
-    img {
-      border: 3px solid #ff66cc;
+
+    /* コンテンツ */
+    .content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(20,20,20,0.85);
+      border: 2px solid #ff66ff;
+      border-radius: 10px;
       box-shadow: 0 0 15px #ff00ff;
+    }
+
+    h1, h2 {
+      color: #ffff99;
+      text-shadow: 0 0 5px #ff00ff;
+    }
+
+    /* フッター */
+    .footer {
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #aaa;
+      background: #111;
+      border-top: 2px solid #ff00ff;
     }
   </style>
 </head>
 <body>
-  <table>
-    <tr>
-      <td class="header">★☆ Welcome to おきらくやほの部屋 ☆★</td>
-    </tr>
-    <tr>
-      <td class="nav">
-        <a href="index.html">HOME</a> |
-        <a href="profile.html">PROFILE</a> |
-        <a href="links.html">LINKS</a> |
-        <a href="diary.html">DIARY</a>
-      </td>
-    </tr>
-    <tr>
-      <td class="content">
-        <marquee scrollamount="5">＼いらっしゃいませ！★☆彡 推してくれてありがとう！☆★／</marquee>
-        <h2>ここはオタクによるオタクのための個人サイトです！</h2>
-        <p>★ 好きなものを好きなだけ語ります。<br>
-        ★ ネットの海に漂う星屑のように生きてます。<br>
-        ★ 掲示板や相互リンクも大歓迎！</p>
-        <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="星アニメ" width="200"><br>
-        <div class="counter">あなたは <b>0042</b> 人目の訪問者です！</div>
-      </td>
-    </tr>
-  </table>
+  <div class="header">★ Welcome to おきらくやほの部屋 ★</div>
+
+  <div class="menu">
+    <a href="index.html">HOME</a>
+    <a href="profile.html">PROFILE</a>
+    <a href="links.html">LINKS</a>
+    <a href="diary.html">DIARY</a>
+  </div>
+
+  <div class="content">
+    <h1>HOME</h1>
+    <p>ようこそ！ここは昔風オタクサイトっぽいテストページです。</p>
+    <p>GitHub Pages で公開できるので、自由にカスタマイズできます。</p>
+  </div>
+
+  <div class="footer">
+    © 2025 おきらくやほ<br>
+    このサイトは個人趣味で運営しています。
+  </div>
 </body>
 </html>
