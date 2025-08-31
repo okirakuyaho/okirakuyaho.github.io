@@ -2,67 +2,87 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>おきらくやほの個人サイト</title>
+  <title>★おきらくやほのオタクサイト★</title>
   <style>
     body {
-      background: url("https://www.transparenttextures.com/patterns/stardust.png");
+      background-color: #000;
+      background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
       font-family: "MS PGothic", "Osaka", sans-serif;
       color: #ffccff;
       margin: 0;
     }
     table {
-      width: 100%;
+      width: 90%;
+      margin: 20px auto;
+      border: 2px solid #ff66cc;
+      background: rgba(20, 20, 20, 0.9);
       border-collapse: collapse;
+      box-shadow: 0 0 20px #ff66cc;
     }
     td {
-      padding: 10px;
+      padding: 15px;
     }
     .header {
-      background: #000080;
+      background: linear-gradient(90deg, #330033, #000033);
       text-align: center;
       color: #00ffff;
-      font-size: 24px;
+      font-size: 28px;
       font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
+      border-bottom: 2px solid #ff66cc;
+      text-shadow: 0 0 10px #ff00ff, 0 0 5px #00ffff;
     }
     .nav {
-      background: #ff66cc;
+      background: #111;
       text-align: center;
+      border-bottom: 1px dashed #ff66cc;
     }
     .nav a {
-      color: #ffff00;
+      color: #ff99ff;
       text-decoration: none;
-      margin: 0 10px;
+      margin: 0 15px;
       font-weight: bold;
+      font-size: 14px;
     }
     .nav a:hover {
-      color: #00ff00;
-      background: #000000;
+      color: #00ffcc;
+      background: #222;
+      padding: 2px 6px;
+      border-radius: 5px;
     }
     .content {
-      background: #222;
-      color: #fff;
       text-align: center;
-      padding: 20px;
+      color: #fff;
+      padding: 30px;
+      line-height: 1.8;
     }
-    .counter {
-      font-size: 12px;
-      color: #00ffff;
-      margin-top: 20px;
+    .content h2 {
+      color: #ffccff;
+      text-shadow: 0 0 5px #ff33ff, 0 0 5px #00ffff;
     }
     marquee {
-      color: #ff00ff;
+      color: #ffff66;
       font-weight: bold;
+      font-size: 14px;
+    }
+    .counter {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #00ffff;
+    }
+    img {
+      border: 3px solid #ff66cc;
+      box-shadow: 0 0 15px #ff00ff;
     }
   </style>
 </head>
 <body>
-  <table border="1">
+  <table>
     <tr>
-      <td colspan="2" class="header">★☆ おきらくやほのオタクサイト ☆★</td>
+      <td class="header">★☆ Welcome to おきらくやほの部屋 ☆★</td>
     </tr>
     <tr>
-      <td colspan="2" class="nav">
+      <td class="nav">
         <a href="index.html">HOME</a> |
         <a href="profile.html">PROFILE</a> |
         <a href="links.html">LINKS</a> |
@@ -70,12 +90,14 @@
       </td>
     </tr>
     <tr>
-      <td colspan="2" class="content">
-        <marquee scrollamount="5">＼いらっしゃいませ！／ 推してくれてありがとう！</marquee>
-        <p>ここは昔ながらの個人サイトです。<br>
-        HTML手打ちで作ってます。BBSとかキリ番報告待ってます！</p>
-        <img src="images/sample.gif" alt="バナー" width="200"><br>
-        <div class="counter">あなたは <b>00042</b> 人目の訪問者です！</div>
+      <td class="content">
+        <marquee scrollamount="5">＼いらっしゃいませ！★☆彡 推してくれてありがとう！☆★／</marquee>
+        <h2>ここはオタクによるオタクのための個人サイトです！</h2>
+        <p>★ 好きなものを好きなだけ語ります。<br>
+        ★ ネットの海に漂う星屑のように生きてます。<br>
+        ★ 掲示板や相互リンクも大歓迎！</p>
+        <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="星アニメ" width="200"><br>
+        <div class="counter">あなたは <b>0042</b> 人目の訪問者です！</div>
       </td>
     </tr>
   </table>
