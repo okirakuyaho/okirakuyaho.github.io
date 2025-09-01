@@ -4,113 +4,77 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LINKS | okirakuyaho</title>
-
-  <style>
-    :root {--bg:#0a0a0f; --fg:#e6e6f0; --line:#2a2a33; --ink:#77e0ff;}
-    html,body{height:100%}
-    body{margin:0;background:var(--bg);color:var(--fg);
-         font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,
-         "Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
-         line-height:1.7}
-    a{color:var(--ink);text-decoration:none}
-    a:hover{text-decoration:underline}
-    header,main,footer{max-width:900px;margin:auto;padding:16px}
-    nav a{margin-right:12px}
-    h1,h2{margin:.2em 0 .6em}
-    .box{padding:16px;border:1px solid var(--line);border-radius:10px;
-         background:rgba(255,255,255,.02)}
-    .banner-line{display:flex;align-items:center;gap:16px}
-    .banner-line img{image-rendering:pixelated;border:1px solid #444;border-radius:6px}
-    .badge{display:inline-block;font-size:.75rem;opacity:.8;background:#1a1a22;
-           border:1px solid var(--line);border-radius:999px;padding:2px 8px;margin-left:8px}
-    textarea.code{width:100%;min-height:90px;margin-top:10px;padding:8px;
-                  border-radius:8px;border:1px solid var(--line);
-                  background:#0f0f16;color:var(--fg);
-                  font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.9rem}
-    .btn{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:8px;
-         border:1px solid var(--line);background:#12121a;color:var(--fg);cursor:pointer}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
-    .grid li{list-style:none;padding:8px;border:1px dashed var(--line);border-radius:8px}
-    small.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
-  </style>
-
-  <!-- 事前読み込み（任意） -->
   <link rel="preload" as="image" href="/images/okiraku_banner.png">
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 <header>
   <h1>LINKS</h1>
   <nav>
-    <a href="/index.html">HOME</a>
-    <a href="/profile.html">PROFILE</a>
-    <a href="/links.html" aria-current="page">LINKS</a>
-    <a href="/diary.html">DIARY</a>
+    <a href="/index.html" >HOME</a>
+    <a href="/profile.html" >PROFILE</a>
+    <a href="/links.html" aria-current='page'>LINKS</a>
+    <a href="/diary.html" >DIARY</a>
   </nav>
 </header>
-
 <main>
-  <!-- 配布バナー -->
-  <section>
-    <h2>配布バナー <span class="badge">88×31</span></h2>
 
-    <div class="box banner-line">
-      <!-- 表示用（あなたのサイトへのリンク付き） -->
-      <a href="https://okirakuyaho.github.io/" title="okirakuyaho へ">
-        <img
-          src="/images/okiraku_banner.png"
-          alt="okirakuyaho バナー"
-          width="88" height="31"
-          loading="lazy" decoding="async">
-      </a>
-      <p>
-        自サイトに貼るときは、下のコードをコピーしてお使いください。<br>
-        <small class="mono">直リンクURL：https://okirakuyaho.github.io/images/okiraku_banner.png</small>
-      </p>
+<section class="box">
+  <h2>配布バナー <span class="badge">88×31</span></h2>
+  <div class="banner">
+    <a href="https://okirakuyaho.github.io/">
+      <img src="/images/okiraku_banner.png" srcset="/images/okiraku_banner@2x.png 2x"
+           width="88" height="31" alt="okirakuyaho バナー" loading="lazy" decoding="async">
+    </a>
+    <div><span class="small">直リンク：</span><br>
+      <code>https://okirakuyaho.github.io/images/okiraku_banner.png</code>
     </div>
-
-    <!-- コピペ用（相互リンク向け：絶対URL版） -->
-    <label for="banner-code"><strong>配布用HTMLコード</strong></label>
-    <textarea id="banner-code" class="code" readonly>
+  </div>
+  <p style="margin-top:10px">下のコードをコピーしてご自由にお使いください。</p>
+  <textarea id="banner-code" class="code" readonly>
 <a href="https://okirakuyaho.github.io/">
-  <img src="https://okirakuyaho.github.io/images/okiraku_banner_1.png" alt="okirakuyaho banner" width="88" height="31" loading="lazy" decoding="async">
-</a>
-    </textarea>
-    <button class="btn" id="copy-btn" type="button">コピーする</button>
-  </section>
+  <img src="https://okirakuyaho.github.io/images/okiraku_banner.png" alt="okirakuyaho banner" width="88" height="31" loading="lazy" decoding="async">
+</a></textarea>
+  <button id="copy-btn" class="btn" type="button">コピーする</button>
+</section>
 
-  <hr style="margin:32px 0;border-color:#2a2a33">
+<hr>
 
-  <!-- お友達バナーを並べるテンプレ（必要に応じて li を複製） -->
-  <section>
-    <h2>リンク集</h2>
-    <ul class="grid">
-      <li>
-        <a href="https://example.com" target="_blank" rel="noopener">
-          <img src="https://example.com/banner.png" alt="Example Site" width="88" height="31" loading="lazy" decoding="async">
-        </a>
-        <div><strong>Example Site</strong></div>
-        <small>ひとこと紹介文をここに。</small>
-      </li>
-    </ul>
-  </section>
+<section>
+  <h2>リンク集（サンプル）</h2>
+  <ul class="grid">
+    <li>
+      <a href="https://example.com" target="_blank" rel="noopener">
+        <img src="https://dummyimage.com/88x31/000/fff.png&text=example" width="88" height="31" alt="Example">
+      </a>
+      <div><strong>Example</strong></div>
+      <div class="small">ひとこと紹介文</div>
+    </li>
+  </ul>
+</section>
+
 </main>
-
 <footer>
   <p>&copy; <span id="year"></span> okirakuyaho</p>
 </footer>
-
 <script>
-  // 「コピーする」ボタン
-  document.getElementById('copy-btn').addEventListener('click', function () {
-    const ta = document.getElementById('banner-code');
-    ta.select();
-    ta.setSelectionRange(0, ta.value.length);
-    const ok = document.execCommand('copy');
-    this.textContent = ok ? 'コピーしました！' : '手動でコピーしてください';
-    setTimeout(() => { this.textContent = 'コピーする'; }, 2000);
-  });
-  // 年号
+
   document.getElementById('year').textContent = new Date().getFullYear();
+  const btn = document.getElementById('copy-btn');
+  if (btn) {{{{
+    btn.addEventListener('click', async () => {{{{
+      const ta = document.getElementById('banner-code');
+      try {{{{
+        await navigator.clipboard.writeText(ta.value.trim());
+        btn.textContent='コピーしました！';
+      }}}} catch (e) {{{{
+        ta.select(); document.execCommand('copy');
+        btn.textContent='コピーしました！';
+      }}}}
+      setTimeout(()=>btn.textContent='コピーする', 1800);
+    }}}});
+  }}}}
+
 </script>
 </body>
 </html>

@@ -1,90 +1,66 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>★ おきらくやほの部屋 — HOME ★</title>
-  <meta name="description" content="昔のオタク個人サイト風のホームページ。PROFILE / LINKS / DIARY あります。" />
-  <link rel="icon" href="favicon.png" />
-  <style>
-    /* ===== 基本レトロテーマ（黒＋星柄） ===== */
-    :root{
-      --bg:#000; --panel:rgba(20,20,20,.88);
-      --txt:#ffccff; --accent:#ff66ff; --neon:#00ffff; --line:#ff00ff;
-    }
-    html,body{height:100%}
-    body{
-      margin:0; padding:0;
-      color:var(--txt);
-      background-color:var(--bg);
-      background-image:url("https://www.transparenttextures.com/patterns/stardust.png");
-      font-family:"MS PGothic","Meiryo","Osaka",Verdana,Arial,sans-serif;
-    }
-    /* ヘッダ */
-    .header{
-      text-align:center; padding:18px 10px;
-      background:#111; border-bottom:2px solid var(--line);
-      color:var(--neon); font-weight:700; letter-spacing:2px;
-      text-shadow:0 0 10px #ff00ff, 0 0 6px var(--neon);
-    }
-    /* メニュー */
-    .menu{ text-align:center; background:#222; border-bottom:2px solid #333; }
-    .menu a{
-      display:inline-block; padding:8px 10px; margin:4px 6px;
-      color:#ff99cc; text-decoration:none; font-weight:bold; border-radius:6px;
-    }
-    .menu a:hover{ color:var(--neon); background:#161616; box-shadow:0 0 8px #ff00ff; }
-    /* 流れる帯（昔風） */
-    marquee{ color:#ffff66; font-weight:bold; padding:6px 0; background:#101010; border-bottom:1px dashed var(--accent); }
-    /* 本文ボックス */
-    .content{
-      max-width:860px; margin:20px auto; padding:22px;
-      background:var(--panel); border:2px solid var(--accent); border-radius:12px;
-      box-shadow:0 0 16px #ff00ff;
-      line-height:1.9;
-    }
-    h1,h2{ color:#ffff99; text-shadow:0 0 5px #ff00ff; }
-    img.frame{ border:3px solid var(--accent); box-shadow:0 0 12px #ff00ff; }
-    /* フッタ */
-    .footer{
-      text-align:center; padding:12px; margin:24px 0 0;
-      color:#aaa; background:#111; border-top:2px solid var(--line); font-size:12px;
-    }
-    /* 点滅風（CSSアニメ） */
-    .blink{ animation:blink 1s steps(2,start) infinite; }
-    @keyframes blink { 50% { opacity:0; } }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HOME | okirakuyaho</title>
+  <link rel="preload" as="image" href="/images/okiraku_banner.png">
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-  <header class="header">★ おきらくやほの部屋 ★</header>
-
-  <nav class="menu">
-    <a href="index.html">HOME</a>
-    <a href="profile.html">PROFILE</a>
-    <a href="links.html">LINKS</a>
-    <a href="diary.html">DIARY</a>
+<header>
+  <h1>HOME</h1>
+  <nav>
+    <a href="/index.html" aria-current='page'>HOME</a>
+    <a href="/profile.html" >PROFILE</a>
+    <a href="/links.html" >LINKS</a>
+    <a href="/diary.html" >DIARY</a>
   </nav>
+</header>
+<main>
 
-  <marquee scrollamount="5" behavior="alternate">＼ いらっしゃいませ！昔のオタク個人サイト風へようこそ ／</marquee>
+<section class="hero">
+  <p>ようこそ。ここは <strong>okirakuyaho</strong> のおきらく部屋です。レトロな個人サイトの雰囲気で、すきなものや日々のことを置いていきます。</p>
+  <div class="banner" style="margin-top:10px">
+    <a href="/index.html">
+      <img src="/images/okiraku_banner.png" srcset="/images/okiraku_banner@2x.png 2x"
+           width="88" height="31" alt="okirakuyaho バナー" loading="lazy" decoding="async">
+    </a>
+    <span class="small">↑ サイトの配布バナーです</span>
+  </div>
+</section>
 
-  <main class="content">
-    <h1><span class="blink">WELCOME</span> — ようこそ！</h1>
-    <p>ここは管理人「おきらくやほ」の個人サイト。テーブル時代の空気を残しつつ、令和ブラウザで見やすく整えた“レトロ・ネオン”テーマです。</p>
-    <p>メニューから <strong>PROFILE / LINKS / DIARY</strong> にどうぞ。工事中アイコンや88×31バナーも順次追加予定。</p>
+<hr>
 
-    <p style="margin-top:18px;">
-      <img class="frame" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="星アニメ" width="220" height="160">
-    </p>
+<section class="box">
+  <h2>更新情報</h2>
+  <ul>
+    <li>2025-09-01 サイトを作り直しました。</li>
+  </ul>
+</section>
 
-    <h2>更新情報</h2>
-    <ul>
-      <li>2025/09/01 … サイト公開（HOME/PROFILE/LINKS/DIARY 設置）</li>
-    </ul>
-  </main>
+</main>
+<footer>
+  <p>&copy; <span id="year"></span> okirakuyaho</p>
+</footer>
+<script>
 
-  <footer class="footer">
-    © 2025 おきらくやほ — 個人趣味サイト / リンクフリー（報告歓迎）<br>Hosted on GitHub Pages
-  </footer>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const btn = document.getElementById('copy-btn');
+  if (btn) {{{{
+    btn.addEventListener('click', async () => {{{{
+      const ta = document.getElementById('banner-code');
+      try {{{{
+        await navigator.clipboard.writeText(ta.value.trim());
+        btn.textContent='コピーしました！';
+      }}}} catch (e) {{{{
+        ta.select(); document.execCommand('copy');
+        btn.textContent='コピーしました！';
+      }}}}
+      setTimeout(()=>btn.textContent='コピーする', 1800);
+    }}}});
+  }}}}
+
+</script>
 </body>
 </html>
